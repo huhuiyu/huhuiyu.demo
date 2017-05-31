@@ -1,0 +1,12 @@
+<div ng-controller="DirectiveIndexCtrl" class="container">
+	<div class="panel panel-info">
+		<div class="panel-body">
+			<div ng-bind="serviceInfo"></div>
+			<div>
+				请输入日期显示格式(y-M-d h:m:s)：<input type="text" ng-model="format">
+			</div>
+			<div show-time="{{format}}"></div>
+			<div show-time="h:m:s"></div>
+		</div>
+	</div>
+</div>

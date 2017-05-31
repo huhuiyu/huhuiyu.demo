@@ -1,0 +1,21 @@
+{
+	"name": "GameWebPortal",
+	"version": "1.0.0",
+	"description": "游戏门户网站",
+	"author": "胡辉煜",
+	"repository": {
+		"type": "svn",
+		"url": "http://code.taobao.org/svn/GamePortal/trunk/GameWebPortal"
+	},
+	"license": "Apache-2.0",
+	"devDependencies": {
+		"del": "^2.2.2",
+		"gulp": "^3.9.1",
+		"gulp-clean-css": "^3.0.4",
+		"gulp-concat": "^2.6.1",
+		"gulp-jshint": "^2.0.4",
+		"gulp-uglify": "^2.1.2",
+		"gulp-watch": "^4.3.11",
+		"jshint": "^2.9.4"
+	}
+}

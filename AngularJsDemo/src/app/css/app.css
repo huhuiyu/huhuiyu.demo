@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+
+* {
+	word-break: break-all;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+.fl {
+	float: left;
+}
+
+.clear {
+	clear: both;
+}

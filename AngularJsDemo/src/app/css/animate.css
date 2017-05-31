@@ -1,0 +1,94 @@
+.animate-div, .move-div-1, .move-div-2, .move-div-3 {
+	border-radius: 20px 20px;
+	margin: 1px;
+	padding: 20px;
+	width: 200px;
+	height: 200px;
+	border: 1px solid red;
+}
+
+.animate {
+	width: 210px;
+	height: 210px;
+}
+
+.animate-div {
+	transition: all linear 1s;
+	opacity: 1;
+}
+
+.animate .ng-hide {
+	width: 0px;
+	height: 0px;
+	opacity: 0;
+}
+
+.animate .ng-show {
+	width: 200px;
+	height: 200px;
+	opacity: 1;
+}
+
+.move-div-1, .move-div-2, .move-div-3 {
+	transition: transform 2s;
+}
+
+.move-div-1:hover {
+	transform: rotate(360deg);
+}
+
+.move-div-2:hover {
+	transform: rotateX(360deg);
+}
+
+.move-div-3:hover {
+	transform: rotateY(360deg);
+}
+
+.move-img {
+	position: relative;
+	animation: moveimg 5s linear 2s infinite alternate;
+}
+
+@keyframes moveimg
+{
+	0%   {left:0px; border-color:#111111;}
+	25%  {left:100px;border-color:#555555;}
+	50%  {left:200px;border-color:#999999;}
+	75%  {left:100px;border-color:#cccccc;}
+	100% {left:0px;border-color:#eeeeee;}
+}
+
+.relative-div {
+	position: relative;
+}
+
+.move-in {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	border-radius: 20px 20px;
+	margin: 1px;
+	padding: 20px;
+	width: 100%;
+	height: 100px;
+	border: 1px solid red;
+}
+
+.move-in.ng-enter {
+	transition: 2s ease-in-out all;
+	left: 100%;
+}
+
+.move-in.ng-enter.ng-enter-active {
+	left: 0px;
+}
+
+.move-in.ng-leave {
+	transition: 2s ease-in-out all;
+	left: 0px;
+}
+
+.move-in.ng-leave.ng-leave-active {
+	left: -100%;
+}

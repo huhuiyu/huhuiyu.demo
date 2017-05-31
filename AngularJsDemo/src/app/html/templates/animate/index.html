@@ -1,0 +1,32 @@
+<div ng-controller="AnimateIndexCtrl" class="container">
+	<div>
+		<div class="bg-primary">
+			<input type="checkbox" ng-model="data.visiable" id="show-hide-change"/><label for="show-hide-change">是否显示 </label>
+			<input type="button" class="btn btn-info" value="动画开关" ng-click="changeStatus();">
+			<input type="button" class="btn btn-info" value="滑动" ng-click="changeIndex();">
+		</div>
+		<div>
+			<div class="animate fl">
+				<div class="animate-div fl" ng-show="data.visiable">显示和隐藏-1</div>
+				<div class="animate-div fl" ng-show="!data.visiable">显示和隐藏-2</div>
+				<div class="clear"></div>
+			</div>
+			<div class="move fl">
+				<div class="move-div-1 fl">效果一</div>
+				<div class="move-div-2 fl">效果二</div>
+				<div class="move-div-3 fl">效果三</div>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div>
+			<div class="animate-div{{data.animateClass}}">移动</div>
+		</div>
+		<div class="relative-div">
+			<div class="move-in" ng-if="data.index===0">滑入滑出-1{{data.index}}</div>
+			<div class="move-in" ng-if="data.index===1">滑入滑出-2{{data.index}}</div>
+		</div>
+	</div>
+</div>
+
+

@@ -1,0 +1,22 @@
+<div ng-controller="AjaxIndexCtrl" class="container">
+	<div>
+		<input type="button" class="btn btn-info" value="获取后台数据" ng-click="getData();">
+		<input type="text" ng-model="submitName">
+		<input type="button" class="btn btn-info" value="获取Node后台数据" ng-click="getNodeData();">
+		<div class="jumbotron" ng-if="!datas">没有数据。。。</div>
+		<table ng-if="datas" class="table table-bordered">
+			<tbody>
+				<tr>
+					<th>编号</th>
+					<th>姓名</th>
+				</tr>
+				<tr ng-repeat="data in datas">
+					<td ng-bind="data.id"></td>
+					<td ng-bind="data.name"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
