@@ -24,6 +24,22 @@ HttpServer.prototype.start = function(ip, port, callback) {
 
 		if (requrl.pathname === "/echo.html" || requrl.pathname === "/echo") { // 回声应答
 			response.writeHead(200, "OK");
+			var postData = "";
+			if (request.method === "POST") {
+				request.on("data", function(rdata) {
+					postData += rdata;
+				});
+				request.on("end", function() {
+					if (postData === "") {
+						response.write("echo");
+					} else {
+						response.write(postData);
+					}
+					return response.end();
+				});
+				return;
+			}
+
 			if (requrl.query) {
 				response.write(requrl.query);
 			} else {
@@ -32,7 +48,7 @@ HttpServer.prototype.start = function(ip, port, callback) {
 			return response.end();
 		}
 
-		if (requrl.pathname === "/ajax.html") { // ajax应答
+		if (requrl.pathname === "/ajax.html" || requrl.pathname === "/ajax") { // ajax应答
 			response.writeHead(200, {
 				"Access-Control-Allow-Origin" : "*",
 				"Access-Control-Allow-Headers" : "X-Requested-With",

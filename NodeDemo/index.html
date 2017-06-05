@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>http服务器演示</title>
+</head>
+<body>
+	<h1>http请求</h1>
+	<form action="http://127.0.0.1:8080/echo" method="post">
+		输入：<input type="text" name="info">
+		<input type="submit" value="提交">
+		<a href="http://127.0.0.1:8080/echo?abc=123">get测试一</a>
+		<a href="http://127.0.0.1:8080/echo.html">get测试二</a>
+	</form>
+	<h1>ajax请求</h1>
+	<form action="http://127.0.0.1:8080/ajax" method="post">
+		输入：<input type="text" name="info">
+		<input type="submit" value="提交">
+		<a href="http://127.0.0.1:8080/ajax?abc=123">get测试一</a>
+		<a href="http://127.0.0.1:8080/ajax.html">get测试二</a>
+	</form>
+</body>
+</html>
