@@ -1,0 +1,5 @@
+{
+    "nodejs": "DEBUG",
+    "nodejsfile": "INFO",
+    "nodejserrfile": "ERROR"
+}
