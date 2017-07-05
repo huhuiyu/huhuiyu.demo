@@ -1,0 +1,27 @@
+apply plugin: 'java'
+
+task hello(){
+	println("hello gradle...");
+}
+
+archivesBaseName = "JavaGradleDemo"
+version = "1.0.0.0"
+
+sourceSets {
+   main {
+      java {
+         srcDir '../src'
+      }
+      resources {
+         srcDir '../resources'
+      }
+   }
+}
+
+repositories {
+   mavenCentral()
+}
+
+dependencies {
+   compile 'org.springframework:spring-context:4.3.9.RELEASE'
+}
