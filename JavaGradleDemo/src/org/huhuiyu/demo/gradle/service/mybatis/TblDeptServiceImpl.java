@@ -17,4 +17,14 @@ public class TblDeptServiceImpl implements TblDeptService {
 	public List<TblDept> queryAll() {
 		return deptDao.queryAll();
 	}
+
+	@Override
+	public void insert(TblDept dept) {
+		deptDao.insert(dept);
+	}
+
+	@Override
+	public void delete(TblDept dept) {
+		deptDao.delete(dept);
+	}
 }
