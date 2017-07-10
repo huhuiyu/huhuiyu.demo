@@ -18,6 +18,20 @@ sourceSets {
    }
 }
 
+jar {
+	manifest {
+		attributes(
+			"Manifest-Version": 1.0,
+			"Main-Class": "org.huhuiyu.demo.gradle.SMDemo"
+		)
+	}
+}
+
+task copyJars(type:Copy) {
+  from configurations.compile
+  into 'build/libs/lib' 
+}
+
 repositories {
 	maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
 	mavenLocal()
@@ -37,6 +51,5 @@ dependencies {
 	compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
 	compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.1.1'
 	compile group: 'org.springframework', name: 'spring-jdbc', version: '4.3.9.RELEASE'
-	compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.8.10'
-	
+	compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.8.10'	
 }
