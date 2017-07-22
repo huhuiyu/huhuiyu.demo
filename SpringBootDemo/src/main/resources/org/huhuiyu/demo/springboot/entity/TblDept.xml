@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.huhuiyu.demo.springboot.dao.TblDeptDAO">
+	<select id="queryAll" resultType="TblDept">
+		select * from TblDept
+	</select>
+	<insert id="insert" parameterType="TblDept" flushCache="true"
+		statementType="PREPARED" keyProperty="did" keyColumn="did"
+		useGeneratedKeys="true" timeout="20">
+		insert into TblDept(dname)
+		values(#{dname})
+	</insert>
+
+	<delete id="delete" parameterType="TblDept" flushCache="true"
+		statementType="PREPARED" timeout="20">
+		delete from TblDept where did=#{did}
+	</delete>
+</mapper>  
